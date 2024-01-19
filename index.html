@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-info">
+                <img src="odin-lined.png">
+                <h1>ODIN</h1>
+            </div>
+            <p class="photo-credit">Photo by <a href="https://unsplash.com/@haliewestphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+            </p>
+        </header>
+        <form action="">
+            <section class="form-header">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+                <p>You <em>know</em> you want to.</p>
+            </section>
+            <section class="form">
+                <p>Let's do this!</p>
+                <div class="form-line">
+                    <div>
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" id="first-name" name="first-name" value="Thor" required>
+                        <span></span>
+                    </div>
+                    <div>
+                        <label for="">LAST NAME</label>
+                        <input type="text" id="last-name" name="last-name" value="Odinson" required>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="form-line">
+                    <div>
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" required>
+                        <span></span>
+                    </div>
+                    <div>
+                        <label for="phone">PHONE NUMBER</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="form-line">
+                    <div>
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password" required>
+                        <span></span>
+                    </div>
+                    <div>
+                        <label for="confirm">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm" name="confirm" required>
+                        <span></span>
+                    </div>
+                </div>
+            </section>
+            <section class="form-footer">
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <a href="#login">Log in</a></p>
+            </section>
+        </form>
+    </div>
+    
+</body>
+<script>
+const password = document.querySelector('#password');
+const passConfirm = document.querySelector('#confirm');
+
+passConfirm.addEventListener('input', () => {
+    if(passConfirm.value != password.value) {
+        password.className = "error";
+        passConfirm.className = "error";
+    } else {
+        password.className = "";
+        passConfirm.className = ""
+    }
+});
+</script>
+</html>
